@@ -11,12 +11,23 @@ import { FormValidationsService } from './form-validations.service';
 })
 export class AppComponent {
   title = 'AirshipCMS';
-  public emailControl: FormControl
+  public emailForm: FormGroup
+  public invalidEmail = false;
 
   constructor(private formBuilder: FormBuilder) {}
 
-  ngOnInit() {
+  validateEmail(event) {
+    event.preventDefault();
 
-    this.emailControl = new FormControl('', Validators.compose([Validators.required, FormValidationsService.validateEmailFormat]));
+    (this.emailForm.controls['email'].errors && this.emailForm.controls['email'].errors['validateEmailFormat']) ?
+      this.invalidEmail = true
+      : null
+  }
+
+  ngOnInit() {
+    this.emailForm = this.formBuilder.group({
+      email: ['', Validators.compose([Validators.required, FormValidationsService.validateEmailFormat])]
+    })
+
   }
 }
