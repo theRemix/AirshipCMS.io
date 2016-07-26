@@ -1,11 +1,18 @@
 <div class="signup-container">
-  <p>Sign up to be a <span>beta test pilot</span> in Fall 2016!</p>
-  <form [formGroup]="emailForm" (submit)="validateEmail($event)">
-  <label for="email">Email</label>
-  <input name="email" type="text" formControlName="email" placeholder="Enter your email" />
-  <p *ngIf="invalidEmail===true">Please enter a valid email</p>
-  <a routerLink="/choose-your-aircraft"><button type="submit">Sign up to be a test-pilot</button></a>
-  </form>
-  <p>We will only contact you with information about AirshipCMS and we will never share it with anyone</p>
+  <div class="signup-form">
+    <p class="header-text">Sign up to be a <span>beta test pilot</span> in Fall 2016!</p>
+    <div class="section section-label">
+      <form [formGroup]="emailForm" (submit)="validateEmail($event)">
+        <fieldset>
+          <input id="email" name="email" type="text" autocomplete="off" required />
+          <label for="email">Enter your email</label>
+        </fieldset>
+        <!-- <label for="email">Email</label> -->
+        <!-- <input class="email-input" name="email" type="text" formControlName="email" placeholder="Enter your email" /> -->
+        <p *ngIf="invalidEmail===true">Please enter a valid email</p>
+        <a routerLink="/choose-your-aircraft"><button type="submit">Sign up to be a test-pilot</button></a>
+      </form>
+    </div>
+    <p class="gray-text">We will only contact you with information about AirshipCMS and we will never share it with anyone</p>
+  </div>
 </div>
-

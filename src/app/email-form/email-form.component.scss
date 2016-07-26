@@ -1,0 +1,93 @@
+$blue: #2E3239;
+$gray: #959BA5;
+
+.signup-container {
+  margin-top: 3em;
+}
+
+.signup-form {
+  height: 17em;
+  width: 33%;
+  margin: auto;
+  padding: 1em;
+  background-color: white;
+  border-radius: 2px;
+}
+
+.header-text {
+  font-family: "Roboto";
+  font-size: 1.1em;
+  color: $blue;
+  opacity: 0.75;
+  width: 63%;
+  margin: auto;
+  padding: 2em;
+
+  span {
+    font-weight: bold;
+  }
+}
+
+.gray-text {
+  font-family: "Lato";
+  color: $gray;
+}
+
+fieldset {
+  margin: 0.5em 0;
+  padding: 0;
+  border: 0;
+}
+
+input {
+  background-color: lightgray;
+  display: block;
+  width: 70%;
+  margin: auto;
+  height: 2em;
+  padding: 8px 8px;
+  border: 0;
+  border-radius: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  background: #F3F5F9;
+  color: #212121;
+  outline: 0;
+  appearance: none;
+  transition: all 0.2s ease-in-out;
+}
+
+// Animation on <label>
+.section-label {
+  fieldset {
+    position: relative;
+    &:last-child input {
+      border-radius: 0 0 4px 4px;
+      box-shadow: 0 2px 0 rgba(0,0,0,0.15);
+    }
+    & + fieldset { border-top: 1px solid #ddd; }
+  }
+  label {
+    font-family: "Roboto";
+    position: absolute;
+    top: 15px;
+    left: 90px;
+    color: $gray;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.2s ease-in-out;
+  }
+  input {
+    &:valid,
+    &:focus {
+      border-bottom: 1px solid black;
+      outline: 0;
+      background: #FFFCD8;
+    }
+    &:valid + label,
+    &:focus + label {
+      font-size: 13px;
+      transform: translate3d(-20px, -35px, 0);
+    }
+  }
+}
