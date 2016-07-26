@@ -1,3 +1,11 @@
-<h1>
-  {{title}}
-</h1>
+<img src="../assets/airship-logo.svg" alt="">
+
+<div class="signup-container">
+  <p>Sign up to be a <span>beta test pilot</span> in Fall 2016!</p>
+  <label for="email">Email</label>
+  <input name="email" type="text" [formControl]="emailControl" required placeholder="Enter your email" />
+  <p *ngIf="emailControl.dirty && emailControl.errors && emailControl.errors.validateEmailFormat">Please enter a valid email format</p>
+  <button>Sign up to be a test-pilot</button>
+  <p>We will only contact you with information about AirshipCMS and we will never share it with anyone</p>
+</div>
+
