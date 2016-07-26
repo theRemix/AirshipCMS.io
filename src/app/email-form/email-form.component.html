@@ -10,7 +10,7 @@
         <p class="error" *ngIf="emailForm.controls.email.dirty && checkingEmail===true && invalidEmail===true">Please enter a valid email</p>
         <div class="submit-container">
           <a *ngIf="!emailForm.controls.email.errors" routerLink="/choose-your-aircraft">
-            <button class="submit-email-button"  type="submit">Sign up to be a test-pilot</button>
+            <button class="submit-email-button valid-submit"type="submit">Sign up to be a test-pilot</button>
           </a>
           <button class="submit-email-button" *ngIf="emailForm.controls.email.errors" [disabled]="emailForm.controls.email.errors" type="submit">Sign up to be a test-pilot</button>
         </div>
