@@ -1,23 +1,37 @@
 <div class="choose-aircraft-container">
-  <p>AirshipCMS allows you to host and manage content for projects of any size.</p>
-  <p>What kind of projects do you want to build?</p>
-  <div class="aircraft-container">
-    <div class="aircraft">
-      <img src="../../assets/paper-plane-graphic.svg" alt="">
-      <p>Paper Plane</p>
-      <p>I want to build a blog or website with a few pages</p>
+  <div class="choose-aircraft">
+    <div class="text-container">
+      <p class="gray-text">AirshipCMS allows you to host and manage content for projects of any size.</p>
+      <p class="gray-text">What kind of projects do you want to build?</p>
     </div>
-    <div class="aircraft">
-      <img src="../../assets/airship-graphic.svg" alt="">
-      <p>Airship</p>
-      <p>I want to build a large website with many pages, collections, or products</p>
+    <div class="aircraft-container clearfix">
+      <div class="aircraft">
+        <div class="graphic-container">
+          <img src="../../assets/paper-plane-graphic.svg" alt="">
+        </div>
+        <p class="aircraft-type">Paper Plane</p>
+        <p class="project-goal">I want to build a blog or website with a few pages</p>
+      </div>
+      <div class="aircraft">
+        <div class="graphic-container">
+          <img src="../../assets/airship-graphic.svg" alt="">
+        </div>
+        <p class="aircraft-type">Airship</p>
+        <p class="project-goal">I want to build a large website with many pages, collections, or products</p>
+      </div>
+      <div class="aircraft">
+        <div class="graphic-container">
+          <img src="../../assets/spaceship-graphic.svg" alt="">
+        </div>
+        <p class="aircraft-type">Spaceship</p>
+        <p class="project-goal">I want to use Airship as a CMS for my custom web application.</p>
+      </div>
     </div>
-    <div class="aircraft">
-      <img src="../../assets/spaceship-graphic.svg" alt="">
-      <p>Spaceship</p>
-      <p>I want to use Airship as a CMS for my custom web application.</p>
+    <div class="button-container">
+      <a routerLink="/thank-you"><button>Submit</button></a>
+    </div>
+    <div class="link-container">
+      <a class="skip-link" routerLink="/thank-you">Skip</a>
     </div>
   </div>
-  <a routerLink="/thank-you"><button>Submit</button></a>
-  <a routerLink="/thank-you">Skip</a>
 </div>
