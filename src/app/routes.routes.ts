@@ -1,3 +1,5 @@
-export class Routes {
-  // { path: '/', component:  }
-}
+import { EmailFormComponent } from './email-form';
+
+export const Routes = [
+  { path: '', component: EmailFormComponent }
+]

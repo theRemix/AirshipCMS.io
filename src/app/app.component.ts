@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { EmailFormComponent } from './email-form';
+// import { EmailFormComponent } from './email-form';
+import { ROUTER_DIRECTIVES } from '@angular/router';
 
 @Component({
   moduleId: module.id,
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  directives: [EmailFormComponent],
+  directives: [ROUTER_DIRECTIVES],
   styleUrls: ['app.component.css']
 })
 export class AppComponent {
