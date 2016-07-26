@@ -17,12 +17,18 @@ export class EmailFormComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder) {}
 
-  validateEmail() {
-    this.checkingEmail = true;
+  validateEmail(event) {
+    if (event === null || event.keyIdentifier === 'Enter') {
+      this.checkingEmail = true;
 
-    (this.emailForm.controls['email'].errors && this.emailForm.controls['email'].errors['validateEmailFormat']) ?
-      null :
-      this.invalidEmail = false;
+      (this.emailForm.controls['email'].errors && this.emailForm.controls['email'].errors['validateEmailFormat']) ?
+        null :
+        this.invalidEmail = false;
+    }
+    else if (event.keyIdentifier !== 'Enter') {
+      this.checkingEmail = false;
+      this.invalidEmail = true;
+    }
   }
 
   ngOnInit() {
