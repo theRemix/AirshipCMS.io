@@ -9,10 +9,60 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
   styleUrls: ['aircraft-selection.component.css']
 })
 export class AircraftSelectionComponent implements OnInit {
+  public paperplaneClicked = false;
+  public airshipClicked = false;
+  public spaceshipClicked = false;
 
   constructor() {}
 
   ngOnInit() {
+  }
+
+  checkAircraft(aircraft) {
+    switch(aircraft) {
+      case 'paperplane':
+        this.paperplaneClicked = true;
+        this.airshipClicked = false;
+        this.spaceshipClicked= false;
+        break;
+      case 'airship':
+        this.airshipClicked = true;
+        this.paperplaneClicked = false;
+        this.spaceshipClicked= false;
+        break;
+      case 'spaceship':
+        this.spaceshipClicked= true;
+        this.paperplaneClicked = false;
+        this.airshipClicked = false;
+        break;
+    }
+  }
+
+  getPaperplaneClass() {
+    if (this.paperplaneClicked) {
+      return 'clicked';
+    }
+    else {
+      return '';
+    }
+  }
+
+  getAirshipClass() {
+    if (this.airshipClicked) {
+      return 'clicked';
+    }
+    else {
+      return '';
+    }
+  }
+
+  getSpaceshipClass() {
+    if (this.spaceshipClicked) {
+      return 'clicked';
+    }
+    else {
+      return '';
+    }
   }
 
 }

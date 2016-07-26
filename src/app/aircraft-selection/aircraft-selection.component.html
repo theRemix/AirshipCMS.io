@@ -5,7 +5,7 @@
       <p class="gray-text">What kind of projects do you want to build?</p>
     </div>
     <div class="aircraft-container clearfix">
-      <div class="aircraft">
+      <div class="aircraft" [ngClass]="getPaperplaneClass()" (click)="checkAircraft('paperplane')">
         <div class="graphic-container">
           <div class="checkbox"></div>
           <div class="checkmark"></div>
@@ -14,7 +14,7 @@
         <p class="aircraft-type">Paper Plane</p>
         <p class="project-goal">I want to build a blog or website with a few pages</p>
       </div>
-      <div class="aircraft">
+      <div class="aircraft" [ngClass]="getAirshipClass()" (click)="checkAircraft('airship')">
         <div class="graphic-container">
           <div class="checkbox"></div>
           <div class="checkmark"></div>
@@ -23,7 +23,7 @@
         <p class="aircraft-type">Airship</p>
         <p class="project-goal">I want to build a large website with many pages, collections, or products</p>
       </div>
-      <div class="aircraft">
+      <div class="aircraft" [ngClass]="getSpaceshipClass()" (click)="checkAircraft('spaceship')">
         <div class="graphic-container">
           <div class="checkbox"></div>
           <div class="checkmark"></div>

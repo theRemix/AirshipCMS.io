@@ -49,6 +49,14 @@ $orange: #FF9F00;
   float: left;
   text-align: center;
 
+  img {
+    padding-top: 1.5em;
+  }
+
+  p {
+    font-family: "Roboto";
+  }
+
   &:nth-of-type(1) {
     margin-left: 8%;
     margin-right: 2%;
@@ -66,15 +74,15 @@ $orange: #FF9F00;
       padding-top: 2em;
     }
   }
+}
 
-  img {
-    padding-top: 1.5em;
-  }
-
-  p {
-    font-family: "Roboto";
+.aircraft.clicked{
+  .checkmark {
+    border-left: 4px solid $orange;
+    border-bottom: 4px solid $orange;
   }
 }
+
 
 // AIRCRAFT ICON CONTAINER
 .graphic-container {
@@ -102,8 +110,6 @@ $orange: #FF9F00;
   right: 18px;
   height: 0.4em;
   width: 1em;
-  // border-left: 4px solid $orange;
-  // border-bottom: 4px solid $orange;
   border-left: 4px solid $light-gray;
   border-bottom: 4px solid $light-gray;
   transform: rotate(-51deg);
