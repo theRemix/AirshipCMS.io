@@ -77,6 +77,9 @@ $orange: #FF9F00;
 }
 
 .aircraft.clicked{
+  box-shadow: 0px 1px 3px 0px lighten($gray, 5%);
+  border: none;
+
   .checkmark {
     border-left: 4px solid $orange;
     border-bottom: 4px solid $orange;
@@ -98,9 +101,9 @@ $orange: #FF9F00;
   right: 15px;
   width: 1.5em;
   height: 1.5em;
-  border: 1px solid darken(#DFE2E7, 1%);
+  border: 1px solid darken(#DCDFE5, 2%);
   border-radius: 2px;
-  box-shadow: 0px 1px 2px 0px #DFE2E7 inset;
+  box-shadow: 0px 1px 2px 0px #DCDFE5 inset;
 }
 
 // CHECKMARK
