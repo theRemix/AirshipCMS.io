@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-// import { EmailFormComponent } from './email-form';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 
 @Component({

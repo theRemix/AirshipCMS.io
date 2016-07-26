@@ -4,7 +4,7 @@
   <label for="email">Email</label>
   <input name="email" type="text" formControlName="email" placeholder="Enter your email" />
   <p *ngIf="invalidEmail===true">Please enter a valid email</p>
-  <button type="submit">Sign up to be a test-pilot</button>
+  <a routerLink="/choose-your-aircraft"><button type="submit">Sign up to be a test-pilot</button></a>
   </form>
   <p>We will only contact you with information about AirshipCMS and we will never share it with anyone</p>
 </div>
