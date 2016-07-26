@@ -105,6 +105,15 @@ input {
   }
 }
 
+// ERROR MESSAGE
+.error {
+  width: 72%;
+  margin: auto;
+  font-size: 0.9em;
+  color: #FF9F00;
+}
+
+// SUBMIT BUTTON CONTAINER
 .submit-container {
   width: 73%;
   margin: auto;

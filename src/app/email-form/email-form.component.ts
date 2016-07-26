@@ -12,16 +12,17 @@ import { FormValidationsService } from '../form-validations.service';
 })
 export class EmailFormComponent implements OnInit {
   public emailForm: FormGroup
-  public invalidEmail = false;
+  public invalidEmail = true;
+  public checkingEmail = false;
 
   constructor(private formBuilder: FormBuilder) {}
 
-  validateEmail(event) {
-    event.preventDefault();
+  validateEmail() {
+    this.checkingEmail = true;
 
     (this.emailForm.controls['email'].errors && this.emailForm.controls['email'].errors['validateEmailFormat']) ?
-      this.invalidEmail = true
-      : null
+      null :
+      this.invalidEmail = false;
   }
 
   ngOnInit() {
