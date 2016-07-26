@@ -1,0 +1,46 @@
+$blue: #2E3239;
+$gray: #959BA5;
+$light-gray: #F3F5F9;
+
+// THANK YOU CONTENT CONTAINER
+.thank-you-container {
+  height: 13em;
+  width: 33%;
+  margin: auto;
+  padding: 1em;
+  padding-top: 4.5em;
+  background-color: white;
+  border-radius: 2px;
+
+  p {
+    font-family: "Roboto";
+    margin: auto;
+    text-align: center;
+
+    &:nth-of-type(3) {
+      width: 60%;
+      line-height: 1.5em;
+    }
+  }
+}
+
+// PLAIN GRAY TEXT
+.gray-text {
+  width: 40%;
+  color: $gray;
+  font-size: 0.8em;
+}
+
+// LARGER 'ANSWER THE CALL' TEXT
+.header-text {
+  width: 50%;
+  font-size: 1.1em;
+  line-height: 1.4em;
+  color: $blue;
+  opacity: 0.75;
+  padding: 1.5em 0;
+
+  span {
+    font-weight: bold;
+  }
+}
