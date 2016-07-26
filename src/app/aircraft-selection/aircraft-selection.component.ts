@@ -21,17 +21,17 @@ export class AircraftSelectionComponent implements OnInit {
   checkAircraft(aircraft) {
     switch(aircraft) {
       case 'paperplane':
-        this.paperplaneClicked = true;
+        this.paperplaneClicked = !this.paperplaneClicked;
         this.airshipClicked = false;
         this.spaceshipClicked= false;
         break;
       case 'airship':
-        this.airshipClicked = true;
+        this.airshipClicked = !this.airshipClicked;
         this.paperplaneClicked = false;
         this.spaceshipClicked= false;
         break;
       case 'spaceship':
-        this.spaceshipClicked= true;
+        this.spaceshipClicked = !this.spaceshipClicked;
         this.paperplaneClicked = false;
         this.airshipClicked = false;
         break;
