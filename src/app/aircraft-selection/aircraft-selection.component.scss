@@ -223,5 +223,9 @@ $orange: #FF9F00;
     opacity: 0.9;
     font-family: "Roboto";
     font-size: 0.8em;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }

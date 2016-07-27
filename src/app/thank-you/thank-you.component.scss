@@ -2,15 +2,33 @@ $blue: #2E3239;
 $gray: #959BA5;
 $light-gray: #F3F5F9;
 
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == "small" {
+    @media (min-width: 0) {
+      @content;
+    }
+  }
+  @else if $breakpoint == "medium" {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  @else if $breakpoint == "large" {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+}
+
 // THANK YOU CONTENT CONTAINER
 .thank-you-container {
-  height: 13em;
-  width: 33%;
   margin: auto;
   padding: 1em;
-  padding-top: 4.5em;
+  padding-top: 3.5em;
   background-color: white;
   border-radius: 2px;
+  width: 75%;
+  height: 12em;
 
   p {
     font-family: "Roboto";
@@ -18,22 +36,42 @@ $light-gray: #F3F5F9;
     text-align: center;
 
     &:nth-of-type(3) {
-      width: 60%;
+      width: 85%;
+      height: 13em;
       line-height: 1.5em;
+
+      @include respond-to(large) {
+        width: 60%;
+      }
     }
+  }
+
+  @include respond-to(medium) {
+    width: 60%;
+    padding: 2em;
+    padding-top: 3.5em;
+  }
+
+  @include respond-to(large) {
+    width: 40%;
+    padding: 4.5em 0 2em 0;
   }
 }
 
 // PLAIN GRAY TEXT
 .gray-text {
-  width: 40%;
+  width: 80%;
   color: $gray;
   font-size: 0.8em;
+
+  @include respond-to(large) {
+    width: 50%;
+  }
 }
 
 // LARGER 'ANSWER THE CALL' TEXT
 .header-text {
-  width: 50%;
+  width: 91%;
   font-size: 1.1em;
   line-height: 1.4em;
   color: $blue;
@@ -42,5 +80,9 @@ $light-gray: #F3F5F9;
 
   span {
     font-weight: bold;
+  }
+
+  @include respond-to(large) {
+    width: 60%;
   }
 }
