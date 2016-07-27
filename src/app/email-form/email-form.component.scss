@@ -3,30 +3,63 @@ $light-blue: #7C8390;
 $gray: #959BA5;
 $light-gray: #F3F5F9;
 
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == "small" {
+    @media (min-width: 0) {
+      @content;
+    }
+  }
+  @else if $breakpoint == "medium" {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  @else if $breakpoint == "large" {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+}
+
 // EMAIL FORM
 .signup-form {
-  height: 18.5em;
-  width: 35%;
   margin: auto;
   padding: 1em;
   background-color: white;
   border-radius: 2px;
+  width: 75%;
+  height: 19em;
+
+  @include respond-to(medium) {
+    height: 18.5em;
+    width: 58%;
+  }
+
+  @include respond-to(large) {
+    width: 35%;
+  }
 }
 
 // BOLDER 'SIGN UP' TEXT
 .header-text {
   font-family: "Roboto";
-  font-size: 1.1em;
   text-align: center;
   color: $blue;
   opacity: 0.75;
   width: 63%;
   margin: auto;
-  padding: 2em;
-  padding-bottom: 1.6em;
+  font-size: 1em;
+  padding: 1.5em;
+  padding-bottom: 2.2em;
 
   span {
     font-weight: bold;
+  }
+
+  @include respond-to(large) {
+    font-size: 1.1em;
+    padding: 2em;
+    padding-bottom: 1.6em;
   }
 }
 
@@ -36,8 +69,12 @@ $light-gray: #F3F5F9;
   font-size: 0.8em;
   text-align: center;
   color: $gray;
-  width: 65%;
   margin: auto;
+  width: 71%;
+
+  @include respond-to(medium) {
+    width: 65%;
+  }
 }
 
 // EMAIL TEXT INPUT FIELDSET
