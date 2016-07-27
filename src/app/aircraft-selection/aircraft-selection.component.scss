@@ -150,7 +150,9 @@ $orange: #FF9F00;
     font-size: 0.7em;
     text-transform: uppercase;
     letter-spacing: 2px;
+  }
 
+  button.enabled {
     &:hover {
       opacity: 0.9;
       cursor: pointer;

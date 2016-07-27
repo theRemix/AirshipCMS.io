@@ -65,4 +65,13 @@ export class AircraftSelectionComponent implements OnInit {
     }
   }
 
+  enableSubmit() {
+    if (this.spaceshipClicked === true || this.paperplaneClicked === true || this.airshipClicked === true) {
+      return 'enabled';
+    }
+    else {
+      return '';
+    }
+  }
+
 }

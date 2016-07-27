@@ -33,7 +33,7 @@
     </div>
   </div>
   <div class="button-container">
-    <a routerLink="/thank-you"><button>Submit</button></a>
+    <a routerLink="/thank-you"><button [ngClass]="enableSubmit()" [disabled]="!(paperplaneCicked === true || airshipClicked === true || spaceshipClicked === true)">Submit</button></a>
   </div>
   <div class="link-container">
     <a class="skip-link" routerLink="/thank-you">Skip</a>
