@@ -5,8 +5,8 @@ $light-gray: #F3F5F9;
 
 // EMAIL FORM
 .signup-form {
-  height: 18em;
-  width: 33%;
+  height: 18.5em;
+  width: 35%;
   margin: auto;
   padding: 1em;
   background-color: white;
@@ -17,12 +17,13 @@ $light-gray: #F3F5F9;
 .header-text {
   font-family: "Roboto";
   font-size: 1.1em;
+  text-align: center;
   color: $blue;
   opacity: 0.75;
   width: 63%;
   margin: auto;
   padding: 2em;
-  padding-bottom: 1.5em;
+  padding-bottom: 1.6em;
 
   span {
     font-weight: bold;
@@ -41,16 +42,18 @@ $light-gray: #F3F5F9;
 
 // EMAIL TEXT INPUT FIELDSET
 fieldset {
-  margin: 0.5em 0;
+  width: 73%;
+  margin: auto;
   padding: 0;
   border: 0;
+  cursor: text;
 }
 
 // EMAIL TEXT INPUT
 input {
   cursor: text;
   display: block;
-  width: 70%;
+  width: 96%;
   margin: auto;
   height: 2em;
   padding: 8px 8px;
@@ -81,7 +84,7 @@ input {
     font-family: "Roboto";
     position: absolute;
     top: 15px;
-    left: 90px;
+    left: 20px;
     color: $gray;
     transform: translate3d(0, 0, 0);
     transition: all 0.2s ease-in-out;
@@ -107,6 +110,7 @@ input {
   margin: auto;
   font-size: 0.9em;
   color: #FF9F00;
+  padding-top: 0.5em;
 }
 
 a {
@@ -118,6 +122,7 @@ a {
   width: 73%;
   margin: auto;
   padding: 0.8em;
+  padding-top: 1em;
 }
 
 // SUBMIT EMAIL BUTTON
