@@ -1,4 +1,4 @@
-export class AirshipCMSSignupPage {
+export class AirshipCmsSignupPage {
   navigateTo() {
     return browser.get('/');
   }

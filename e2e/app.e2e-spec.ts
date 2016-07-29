@@ -1,10 +1,10 @@
-import { AirshipCMSSignupPage } from './app.po';
+import { AirshipCmsSignupPage } from './app.po';
 
 describe('airship-cms-signup App', function() {
-  let page: AirshipCMSSignupPage;
+  let page: AirshipCmsSignupPage;
 
   beforeEach(() => {
-    page = new AirshipCMSSignupPage();
+    page = new AirshipCmsSignupPage();
   });
 
   it('should display message saying app works', () => {
